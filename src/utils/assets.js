@@ -13,5 +13,5 @@ export const icons = {
   Apple: require(`${ICON_PATH}Apple.png`),
   Facebook: require(`${ICON_PATH}Facebook.png`),
   Gmail: require(`${ICON_PATH}Gmail.png`),
-  
+  Search: require(`${ICON_PATH}Search.png`),
 };

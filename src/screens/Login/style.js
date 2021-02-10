@@ -25,7 +25,8 @@ export default StyleSheet.create({
     width: width * 0.9,
     borderTopLeftRadius: width * 0.05,
     borderTopRightRadius: width * 0.05,
-    backgroundColor: COLORS.LIGHTGREY
+    backgroundColor: COLORS.LIGHTGREY,
+    opacity: COLORS.LIGHTGREY =='#2B2E3D' ?  0.5 : 1
   },
   BackBtnCont: {
     width: width * 0.075,

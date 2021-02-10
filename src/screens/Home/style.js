@@ -8,7 +8,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.PRIMARY_BG,
     zIndex: 999,
-    paddingTop: height * 0.03
+    // paddingVertical: height * 0.0
   },
   InnerCont: {
     height: height * 0.96,
@@ -17,7 +17,7 @@ export default StyleSheet.create({
     borderTopLeftRadius: width * 0.05,
     borderTopRightRadius: width * 0.05,
     backgroundColor: COLORS.SECONDARY_BG,
-    paddingTop: height * 0.07
+    paddingTop: height * 0.012
   },
   SecondaryContBg: {
     height: height * 0.015,
@@ -25,8 +25,28 @@ export default StyleSheet.create({
     width: width * 0.9,
     borderTopLeftRadius: width * 0.05,
     borderTopRightRadius: width * 0.05,
-    backgroundColor: COLORS.LIGHTGREY
+    backgroundColor: COLORS.LIGHTGREY,
+    opacity: COLORS.LIGHTGREY =='#2B2E3D' ?  0.5 : 1
   },
+  tabCont: {
   
+    width: '100%',
+    height: height * 0.055,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  tabTextCont: {
+    width: '27%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: width * 0.025,
+  },
+  tabText: {
+    // fontFamily: 'Poppins-Regular',
+    fontSize: width *0.04,
+    color: COLORS.TEXTGREY,
+  },
 
 });

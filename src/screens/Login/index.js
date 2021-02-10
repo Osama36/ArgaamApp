@@ -45,7 +45,7 @@ export default function index(props) {
             BgColor={COLORS.ORANGE}
             Text="تسجيل الدخول"
             TextColor={COLORS.WHITE}
-            onPress={() => props.navigation.navigate('AppNavigator')}
+            onPress={() => props.navigation.navigate('TabNavigator')}
           />
         </View>
         <View style={styles.Seprator}>
