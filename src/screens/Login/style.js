@@ -28,9 +28,9 @@ export default StyleSheet.create({
     backgroundColor: COLORS.LIGHTGREY
   },
   BackBtnCont: {
-    width: width * 0.065,
-    height: width * 0.065,
-    borderRadius: width * 0.065 / 2,
+    width: width * 0.075,
+    height: width * 0.075,
+    borderRadius: width * 0.075 / 2,
     position: 'absolute',
     right: width * 0.05,
     top: height * 0.03,
@@ -51,13 +51,13 @@ export default StyleSheet.create({
     fontSize: width * 0.1,
     paddingTop: height * 0.04,
     textAlign: 'center',
-    color: COLORS.BLACK
+    color: COLORS.BLACKWHITE
   },
   HeadingDesc: {
     fontSize: width * 0.05,
     marginBottom: height *0.02,
     textAlign: 'center',
-    color: COLORS.BLACK
+    color: COLORS.BLACKWHITE
   },
   CheckCont: {
     width: width * 0.17,
@@ -75,7 +75,7 @@ export default StyleSheet.create({
   },
   CheckText: {
     fontSize: width * 0.04,
-    color: COLORS.BLACK
+    color: COLORS.BLACKWHITE
   },
   BtnCont: {
     width: '90%',
@@ -109,7 +109,8 @@ export default StyleSheet.create({
   },
   SocialLogo:{
     width: '50%',
-    height: '50%'
+    height: '50%',
+    tintColor: COLORS.BLACKWHITE
   },
   Line:{
     width :'33%',

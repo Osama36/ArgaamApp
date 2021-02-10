@@ -18,9 +18,9 @@ export default COLORS = (mode == "LIGHT") ? {
 
 } :
   {
-    PRIMARY_BG: '#fff',
-    SECONDARY_BG: '#EEEEEE',
-    LIGHTGREY: '#F5F5F5',
+    PRIMARY_BG: '#1F1D2B',
+    SECONDARY_BG: '#2B2E3D',
+    LIGHTGREY: '#2B2E3D',
     WHITE: '#fff',
     BLACK: '#000',
     RED: 'green',
