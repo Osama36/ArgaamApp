@@ -14,4 +14,10 @@ export const icons = {
   Facebook: require(`${ICON_PATH}Facebook.png`),
   Gmail: require(`${ICON_PATH}Gmail.png`),
   Search: require(`${ICON_PATH}Search.png`),
+  chart: require(`${ICON_PATH}chart.png`),
+  newsimage: require(`${ICON_PATH}newsimage.png`),
+  timewhite: require(`${ICON_PATH}timewhite.png`),
+  likewhite: require(`${ICON_PATH}likewhite.png`),
+  messagewhite: require(`${ICON_PATH}messagewhite.png`),
+  uploadwhite: require(`${ICON_PATH}uploadwhite.png`),
 };
