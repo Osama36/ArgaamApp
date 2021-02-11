@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 
-let mode = "LIGHT";
+let mode = "LIGHsdT";
 
 export default COLORS = (mode == "LIGHT") ? {
   PRIMARY_BG: '#fff',
