@@ -142,7 +142,7 @@ export default StyleSheet.create({
   StatsCont: {
     width: '30%',
     alignItems: 'center',
-    height: '20%',
+    height: '100%',
     flexDirection: 'row-reverse',
     justifyContent: 'space-around'
   },

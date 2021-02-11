@@ -119,7 +119,7 @@ export default function index(props) {
   ],
   );
 
-  
+
 
   const _renderItem = ({ item, index }) => {
     return (
@@ -224,23 +224,23 @@ export default function index(props) {
         </View>
         <View style={styles.DataCont}>
           <View style={styles.RightCont}>
-            <Text style={{ fontSize: width * 0.05,color: COLORS.BLACKWHITE }}>تاسي</Text>
-            <Text style={{ fontSize: width * 0.08 ,color: COLORS.BLACKWHITE}}>7,862.23</Text>
+            <Text style={{ fontSize: width * 0.05, color: COLORS.BLACKWHITE }}>تاسي</Text>
+            <Text style={{ fontSize: width * 0.08, color: COLORS.BLACKWHITE }}>7,862.23</Text>
             <Text style={{ color: COLORS.GREEN }}>(0.33%) 23.64</Text>
           </View>
           <View style={styles.LeftCont}>
-            <Text style={{ fontSize: width * 0.03,color: COLORS.BLACKWHITE }}>آخر 30 يومًا</Text>
+            <Text style={{ fontSize: width * 0.03, color: COLORS.BLACKWHITE }}>آخر 30 يومًا</Text>
             <View style={styles.ChartCont}>
               <Image source={icons.chart} resizeMode='contain' style={{ width: '100%', height: '100%' }} />
             </View>
 
             <View style={styles.ChartRow}>
-              <Text style={{color: COLORS.BLACKWHITE}}>w1</Text>
-              <Text style={{color: COLORS.BLACKWHITE}}>w1</Text>
-              <Text style={{color: COLORS.BLACKWHITE}}>w1</Text>
-              <Text style={{color: COLORS.BLACKWHITE}}>w1</Text>
-              <Text style={{color: COLORS.BLACKWHITE}}>w1</Text>
-              
+              <Text style={{ color: COLORS.BLACKWHITE }}>w1</Text>
+              <Text style={{ color: COLORS.BLACKWHITE }}>w1</Text>
+              <Text style={{ color: COLORS.BLACKWHITE }}>w1</Text>
+              <Text style={{ color: COLORS.BLACKWHITE }}>w1</Text>
+              <Text style={{ color: COLORS.BLACKWHITE }}>w1</Text>
+
             </View>
           </View>
         </View>
