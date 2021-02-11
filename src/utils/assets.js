@@ -20,4 +20,6 @@ export const icons = {
   likewhite: require(`${ICON_PATH}likewhite.png`),
   messagewhite: require(`${ICON_PATH}messagewhite.png`),
   uploadwhite: require(`${ICON_PATH}uploadwhite.png`),
+  newssmallimages1: require(`${ICON_PATH}newssmallimages1.png`),
+  newssmallimages2: require(`${ICON_PATH}newssmallimages2.png`),
 };

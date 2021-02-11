@@ -51,8 +51,8 @@ export default StyleSheet.create({
   DataCont: {
     width: '95%',
     alignSelf: 'center',
-    height: height * 0.15,
-    borderRadius: width * 0.05,
+    height: height * 0.12,
+    borderRadius: width * 0.03,
     marginTop: height * 0.01,
     backgroundColor: COLORS.PRIMARY_BG,
     alignItems: 'center',
@@ -92,10 +92,10 @@ export default StyleSheet.create({
     height: height * 0.25,
     width: width,
     alignItems: 'center',
-    marginTop: height *0.01
+    marginTop: height * 0.01
   },
   CarouselItem: {
-    backgroundColor: 'red',
+  
     borderRadius: width * 0.1,
     height: '100%',
     width: '100%'
@@ -106,7 +106,7 @@ export default StyleSheet.create({
     fontSize: width * 0.04,
     color: COLORS.WHITE,
     height: '35%',
-    marginBottom: height *0.008
+    marginBottom: height * 0.008
   },
   SmallSeperator: {
     height: '70%',
@@ -126,36 +126,82 @@ export default StyleSheet.create({
     height: '60%',
     justifyContent: 'space-evenly'
   },
-  CarouselBottomRow:{
+  CarouselBottomRow: {
     width: '100%',
     height: '25%',
     justifyContent: 'space-between',
     flexDirection: 'row-reverse'
   },
-  TimeContainer:{
-  width: '30%',
-  alignItems: 'center',
-  height : '100%',
-  flexDirection: 'row-reverse',
-  justifyContent: 'space-around'
-  },
-  StatsCont:{
+  TimeContainer: {
     width: '30%',
     alignItems: 'center',
-    height : '100%',
+    height: '100%',
     flexDirection: 'row-reverse',
     justifyContent: 'space-around'
   },
-  ClockCont:{
+  StatsCont: {
+    width: '30%',
+    alignItems: 'center',
+    height: '20%',
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-around'
+  },
+  ClockCont: {
     width: '30%',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  ClockImg:{
+  ClockImg: {
     resizeMode: 'contain',
     height: '70%',
     width: '70%'
-  }
+  },
 
+  FlatListItem: {
+    width: '100%',
+    height: height * 0.12,
+    marginBottom: height * 0.01,
+    flexDirection: 'row-reverse',
+    backgroundColor: COLORS.PRIMARY_BG,
+    borderRadius: width * 0.05,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: '2.5%'
+  },
+  StoryImgCont: {
+    height: '85%',
+    width: '20%'
+  },
+  StoryDetails: {
+    width: '75%',
+    height: '95%',
+    alignItems: 'flex-end',
+    justifyContent: 'space-around'
+  },
+  StoryTitle: {
+    fontSize: width * 0.03,
+  },
+  StoryTime: {
+    fontSize: width * 0.03,
+    color: COLORS.GREY_BG,
+  },
+  FlatListImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: width * 0.03,
+  },
+  FlatListStatsCont: {
+    width: '30%',
+    height: '100%',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
+  },
+  FlatlistBottomCont: {
+    height: '20%', 
+    flexDirection: 'row-reverse',
+    width: '100%', 
+    justifyContent: 'space-between'
+  }
 });
