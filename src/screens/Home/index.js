@@ -258,7 +258,7 @@ export default function index(props) {
             autoplay={true}
             loop={true}
             autoplayDelay={1000}
-            autoplayInterval={1000}
+            autoplayInterval={3000}
             // onSnapToItem={(index) => setActivateIndex(index)}
             activeSlideAlignment="center"
           />
