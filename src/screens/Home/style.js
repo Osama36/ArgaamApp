@@ -1,7 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import COLORS from '../../styles/colors';
-const { width, height } = Dimensions.get('window');
-
+const {width, height} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
@@ -17,7 +16,7 @@ export default StyleSheet.create({
     borderTopLeftRadius: width * 0.05,
     borderTopRightRadius: width * 0.05,
     backgroundColor: COLORS.SECONDARY_BG,
-    paddingTop: height * 0.012
+    paddingTop: height * 0.012,
   },
   SecondaryContBg: {
     height: height * 0.015,
@@ -26,10 +25,9 @@ export default StyleSheet.create({
     borderTopLeftRadius: width * 0.05,
     borderTopRightRadius: width * 0.05,
     backgroundColor: COLORS.LIGHTGREY,
-    opacity: COLORS.LIGHTGREY == '#2B2E3D' ? 0.5 : 1
+    opacity: COLORS.LIGHTGREY == '#2B2E3D' ? 0.5 : 1,
   },
   tabCont: {
-
     width: '100%',
     height: height * 0.055,
     flexDirection: 'row',
@@ -56,7 +54,7 @@ export default StyleSheet.create({
     marginTop: height * 0.01,
     backgroundColor: COLORS.PRIMARY_BG,
     alignItems: 'center',
-    flexDirection: 'row-reverse'
+    flexDirection: 'row-reverse',
   },
   RightCont: {
     width: '50%',
@@ -65,40 +63,39 @@ export default StyleSheet.create({
     borderLeftColor: COLORS.TEXTGREY,
     borderLeftWidth: width * 0.00075,
     paddingHorizontal: width * 0.03,
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   LeftCont: {
     width: '50%',
     height: '80%',
     alignItems: 'flex-start',
     paddingHorizontal: width * 0.03,
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   RightContText: {
-    fontSize: width * 0.05
+    fontSize: width * 0.05,
   },
   ChartCont: {
     width: '90%',
     height: '40%',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   ChartRow: {
     width: '90%',
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   CarouselCont: {
     height: height * 0.25,
     width: width,
     alignItems: 'center',
-    marginTop: height * 0.01
+    marginTop: height * 0.01,
   },
   CarouselItem: {
-  
     borderRadius: width * 0.1,
     height: '100%',
-    width: '100%'
+    width: '100%',
     // padding: 50,
   },
   CarouselTitle: {
@@ -106,12 +103,12 @@ export default StyleSheet.create({
     fontSize: width * 0.04,
     color: COLORS.WHITE,
     height: '35%',
-    marginBottom: height * 0.008
+    marginBottom: height * 0.008,
   },
   SmallSeperator: {
     height: '70%',
-    width: '1%', backgroundColor:
-      COLORS.TEXTGREY
+    width: '1%',
+    backgroundColor: COLORS.TEXTGREY,
   },
   CarouselRow: {
     width: '50%',
@@ -124,38 +121,50 @@ export default StyleSheet.create({
     width: '100%',
     alignItems: 'flex-end',
     height: '60%',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   CarouselBottomRow: {
     width: '100%',
     height: '25%',
     justifyContent: 'space-between',
-    flexDirection: 'row-reverse'
+    flexDirection: 'row-reverse',
   },
   TimeContainer: {
     width: '30%',
     alignItems: 'center',
     height: '100%',
     flexDirection: 'row-reverse',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   StatsCont: {
     width: '30%',
     alignItems: 'center',
     height: '100%',
     flexDirection: 'row-reverse',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   ClockCont: {
     width: '30%',
     height: '100%',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   ClockImg: {
     resizeMode: 'contain',
-    height: '70%',
-    width: '70%'
+    height: '60%',
+    width: '60%',
+  },
+  ClockImg1: {
+    resizeMode: 'contain',
+    height: '100%',
+    width: '95%',
+    //backgroundColor: 'red',
+  },
+  ClockImg2: {
+    resizeMode: 'contain',
+    height: '72%',
+    width: '72%',
+    //backgroundColor: 'red',
   },
 
   FlatListItem: {
@@ -167,17 +176,17 @@ export default StyleSheet.create({
     borderRadius: width * 0.05,
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: '2.5%'
+    paddingHorizontal: '2.5%',
   },
   StoryImgCont: {
     height: '85%',
-    width: '20%'
+    width: '20%',
   },
   StoryDetails: {
     width: '75%',
     height: '95%',
     alignItems: 'flex-end',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   StoryTitle: {
     fontSize: width * 0.03,
@@ -196,12 +205,12 @@ export default StyleSheet.create({
     height: '100%',
     flexDirection: 'row-reverse',
     alignItems: 'center',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   FlatlistBottomCont: {
-    height: '20%', 
+    height: '20%',
     flexDirection: 'row-reverse',
-    width: '100%', 
-    justifyContent: 'space-between'
-  }
+    width: '100%',
+    justifyContent: 'space-between',
+  },
 });

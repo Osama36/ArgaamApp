@@ -33,4 +33,7 @@ export const icons = {
   eyeorange: require(`${ICON_PATH}eyeorange.png`),
   heartorange: require(`${ICON_PATH}heartorange.png`),
   bulborange: require(`${ICON_PATH}bulborange.png`),
+  Flag: require(`${ICON_PATH}Flag.png`),
+  downArrow: require(`${ICON_PATH}downArrow.png`),
+  verticalmore: require(`${ICON_PATH}verticalmore.png`),
 };

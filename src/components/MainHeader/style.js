@@ -1,6 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import COLORS from '../../styles/colors';
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
@@ -13,16 +13,32 @@ export default StyleSheet.create({
     // backgroundColor: 'red',
     width: '100%',
   },
-  leftImageContainer: {
-    // backgroundColor: 'blue',
+  leftMultiImageContainer: {
+    backgroundColor: COLORS.LIGHTGREY,
     alignItems: 'center',
     justifyContent: 'center',
     width: width * 0.1,
     height: width * 0.1,
+    borderRadius: (width * 0.1) / 2,
+    marginHorizontal: width * 0.005,
+  },
+
+  leftImageContainer: {
+    //backgroundColor: 'blue',
+    alignItems: 'center',
+    // justifyContent: 'center',
+    width: width * 0.13,
+    height: width * 0.1,
+    flexDirection: 'row',
   },
   leftImage: {
-    width: '70%',
-    height: '70%',
+    width: '95%',
+    height: '95%',
+    resizeMode: 'contain',
+  },
+  leftImage2: {
+    width: '45%',
+    height: '45%',
   },
   LogoContainer: {
     // backgroundColor: 'red',
@@ -34,24 +50,25 @@ export default StyleSheet.create({
   Logo: {
     width: '100%',
     height: '100%',
-    tintColor: COLORS.ORANGE
+    tintColor: COLORS.ORANGE,
   },
   text: {
     color: '#E4A98C',
     fontSize: width * 0.05,
   },
+
   rightImageContainer: {
     backgroundColor: COLORS.LIGHTGREY,
     alignItems: 'center',
     justifyContent: 'center',
     width: width * 0.1,
     height: width * 0.1,
-    borderRadius: width * 0.1 / 2
+    borderRadius: (width * 0.1) / 2,
   },
   rightImage: {
+    resizeMode: 'contain',
     width: '70%',
     height: '70%',
-    tintColor: COLORS.TEXTGREY
+    tintColor: COLORS.TEXTGREY,
   },
-
 });

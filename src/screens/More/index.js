@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, {useState, useRef} from 'react';
 import {
   FlatList,
   Text,
@@ -10,10 +10,10 @@ import {
 } from 'react-native';
 import styles from './style';
 import COLORS from '../../styles/colors';
-import { icons } from '../../utils/assets';
+import {icons} from '../../utils/assets';
 import MainHeader from '../../components/MainHeader';
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 console.log('lol');
 const data = [
@@ -65,7 +65,7 @@ const data = [
 ];
 
 export default function index(props) {
-  const _renderItem = ({ item, index }) => {
+  const _renderItem = ({item, index}) => {
     return (
       <View
         // activeOpacity={10}
@@ -73,14 +73,14 @@ export default function index(props) {
         <ImageBackground
           source={item.image}
           resizeMode="stretch"
-          style={{ width: '100%', height: '100%', alignItems: 'flex-end' }}>
+          style={{width: '100%', height: '100%', alignItems: 'flex-end'}}>
           <View style={styles.CarouselInner}>
             <View style={styles.CarouselRow}>
-              <Text style={{ color: COLORS.ORANGE, fontWeight: 'bold' }}>
+              <Text style={{color: COLORS.ORANGE, fontWeight: 'bold'}}>
                 {item.author}
               </Text>
               <View style={styles.SmallSeperator} />
-              <Text style={{ color: COLORS.WHITE }}>{item.date}</Text>
+              <Text style={{color: COLORS.WHITE}}>{item.date}</Text>
             </View>
             <Text style={styles.CarouselTitle}>{item.title}</Text>
             <View style={styles.CarouselBottomRow}>
@@ -88,10 +88,10 @@ export default function index(props) {
                 <View style={styles.ClockCont}>
                   <Image source={icons.timewhite} style={styles.ClockImg} />
                 </View>
-                <Text style={{ color: COLORS.WHITE }}>{item.time}</Text>
+                <Text style={{color: COLORS.WHITE}}>{item.time}</Text>
               </View>
               <View style={styles.StatsCont}>
-                <Text style={{ color: COLORS.WHITE }}>{item.commentcount}</Text>
+                <Text style={{color: COLORS.WHITE}}>{item.commentcount}</Text>
                 <View style={styles.ClockCont}>
                   <Image source={icons.messagewhite} style={styles.ClockImg} />
                 </View>
@@ -112,10 +112,14 @@ export default function index(props) {
   return (
     <View style={styles.container}>
       <MainHeader
+        isCountry={true}
         leftIcon={icons.Search}
         rightIcon={icons.Search}
         rightIconFired={() => alert('uploaded')}
-        LeftIconFired={() => props.navigation.goBack()}
+        LeftIconFired={() => alert('LefticonFired')}
+        LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         // text={'news'}
         navigation={props.navigation}
       />
@@ -127,7 +131,7 @@ export default function index(props) {
               <Image
                 source={icons.User}
                 resizeMode="contain"
-                style={{ width: '100%', height: '100%' }}
+                style={{width: '100%', height: '100%'}}
               />
             </View>
             <View style={styles.UserDetailsCont}>
@@ -140,7 +144,7 @@ export default function index(props) {
               <Image
                 source={icons.Amount}
                 resizeMode="contain"
-                style={{ width: '70%', height: '70%' }}
+                style={{width: '70%', height: '70%'}}
               />
             </View>
             <View style={styles.UserDetailsCont}>
@@ -156,23 +160,21 @@ export default function index(props) {
           contentContainerStyle={{
             width: '95%',
             alignSelf: 'center',
-            
-            paddingBottom: height * 0.2
+
+            paddingBottom: height * 0.2,
           }}
-          style={{ marginTop: height * 0.02 }}
-          renderItem={({ item }) => {
+          style={{marginTop: height * 0.02}}
+          renderItem={({item}) => {
             return (
-              <View
-                style={styles.MenuRow}>
-                <View
-                  style={styles.MenuIconCont}>
+              <View style={styles.MenuRow}>
+                <View style={styles.MenuIconCont}>
                   <Image
                     source={item.icon}
                     resizeMode="contain"
-                    style={{ width: '50%', height: '50%' }}
+                    style={{width: '50%', height: '50%'}}
                   />
                 </View>
-                <View style={{ height: '50%', width: '60%' }}>
+                <View style={{height: '50%', width: '60%'}}>
                   <Text style={styles.MenuLabel}>{item.text}</Text>
                 </View>
                 <View style={styles.MenuIconCont}>
