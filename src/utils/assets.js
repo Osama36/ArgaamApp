@@ -36,4 +36,12 @@ export const icons = {
   Flag: require(`${ICON_PATH}Flag.png`),
   downArrow: require(`${ICON_PATH}downArrow.png`),
   verticalmore: require(`${ICON_PATH}verticalmore.png`),
+  Details01: require(`${ICON_PATH}Details01.png`),
+  Details02: require(`${ICON_PATH}Details2.png`),
+  Details03: require(`${ICON_PATH}Details3.png`),
+  Details04: require(`${ICON_PATH}Details4.png`),
+  Details05: require(`${ICON_PATH}Details5.png`),
+  Details06: require(`${ICON_PATH}Details6.png`),
+  Details07: require(`${ICON_PATH}Details7.png`),
+  Details08: require(`${ICON_PATH}Details8.png`),
 };

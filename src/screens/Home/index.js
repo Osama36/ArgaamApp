@@ -137,45 +137,50 @@ export default function index(props) {
 
   const _renderItem = ({item, index}) => {
     return (
-      <View
-        // activeOpacity={10}
-        style={styles.CarouselItem}>
-        <ImageBackground
-          source={item.image}
-          resizeMode="stretch"
-          style={{width: '100%', height: '100%', alignItems: 'flex-end'}}>
-          <View style={styles.CarouselInner}>
-            <View style={styles.CarouselRow}>
-              <Text style={{color: COLORS.ORANGE, fontWeight: 'bold'}}>
-                {item.author}
-              </Text>
-              <View style={styles.SmallSeperator} />
-              <Text style={{color: COLORS.WHITE}}>{item.date}</Text>
-            </View>
-            <Text style={styles.CarouselTitle}>{item.title}</Text>
-            <View style={styles.CarouselBottomRow}>
-              <View style={styles.TimeContainer}>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.timewhite} style={styles.ClockImg} />
-                </View>
-                <Text style={{color: COLORS.WHITE}}>{item.time}</Text>
+      <TouchableOpacity onPress={() => props.navigation.navigate('NewDetails')}>
+        <View
+          // activeOpacity={10}
+          style={styles.CarouselItem}>
+          <ImageBackground
+            source={item.image}
+            resizeMode="stretch"
+            style={{width: '100%', height: '100%', alignItems: 'flex-end'}}>
+            <View style={styles.CarouselInner}>
+              <View style={styles.CarouselRow}>
+                <Text style={{color: COLORS.ORANGE, fontWeight: 'bold'}}>
+                  {item.author}
+                </Text>
+                <View style={styles.SmallSeperator} />
+                <Text style={{color: COLORS.WHITE}}>{item.date}</Text>
               </View>
-              <View style={styles.StatsCont}>
-                <Text style={{color: COLORS.WHITE}}>{item.commentcount}</Text>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.messagewhite} style={styles.ClockImg} />
+              <Text style={styles.CarouselTitle}>{item.title}</Text>
+              <View style={styles.CarouselBottomRow}>
+                <View style={styles.TimeContainer}>
+                  <View style={styles.ClockCont}>
+                    <Image source={icons.timewhite} style={styles.ClockImg} />
+                  </View>
+                  <Text style={{color: COLORS.WHITE}}>{item.time}</Text>
                 </View>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.likewhite} style={styles.ClockImg} />
-                </View>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.uploadwhite} style={styles.ClockImg} />
+                <View style={styles.StatsCont}>
+                  <Text style={{color: COLORS.WHITE}}>{item.commentcount}</Text>
+                  <View style={styles.ClockCont}>
+                    <Image
+                      source={icons.messagewhite}
+                      style={styles.ClockImg}
+                    />
+                  </View>
+                  <View style={styles.ClockCont}>
+                    <Image source={icons.likewhite} style={styles.ClockImg} />
+                  </View>
+                  <View style={styles.ClockCont}>
+                    <Image source={icons.uploadwhite} style={styles.ClockImg} />
+                  </View>
                 </View>
               </View>
             </View>
-          </View>
-        </ImageBackground>
-      </View>
+          </ImageBackground>
+        </View>
+      </TouchableOpacity>
     );
   };
 
@@ -301,7 +306,9 @@ export default function index(props) {
           style={{marginBottom: height * 0.2, marginTop: height * 0.02}}
           renderItem={({item}) => {
             return (
-              <TouchableOpacity style={styles.FlatListItem}>
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('NewDetails')}
+                style={styles.FlatListItem}>
                 <View style={styles.StoryImgCont}>
                   <Image
                     source={item.image}

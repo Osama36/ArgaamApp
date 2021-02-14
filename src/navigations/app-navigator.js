@@ -16,6 +16,7 @@ import More from '../screens/More';
 
 // Stack Screens
 import Login from '../screens/Login';
+import NewDetails from '../screens/NewDetails';
 
 import SafeArea from 'react-native-safe-area';
 
@@ -36,7 +37,7 @@ const bottomTabs = [
   {
     id: 4,
     name: 'Streamer',
-    barName: 'Streamer',
+    barName: 'غاسل',
     component: Streamer,
     iconActive: icons.streamer,
     iconInactive: icons.streamer,
@@ -44,7 +45,7 @@ const bottomTabs = [
   {
     id: 3,
     name: 'FinancialReports',
-    barName: 'FinancialReports',
+    barName: 'تقارير مالية',
     component: FinancialReports,
     iconActive: icons.financialreports,
     iconInactive: icons.financialreports,
@@ -52,7 +53,7 @@ const bottomTabs = [
   {
     id: 2,
     name: 'Companies',
-    barName: 'Companies',
+    barName: 'شركات',
     component: Companies,
     iconActive: icons.companies,
     iconInactive: icons.companies,
@@ -135,7 +136,7 @@ function AppTabNavigator() {
                               //borderColor: COLORS.WHITE,
                               justifyContent: 'center',
                               alignItems: 'center',
-                              marginVertical: height * 0.02,
+                              marginVertical: height * 0.005,
                               backgroundColor: COLORS.ORANGE,
                             }}>
                             <Image
@@ -150,8 +151,9 @@ function AppTabNavigator() {
                           </View>
                           <Text
                             style={{
-                              fontSize: width * 0.035,
+                              fontSize: width * 0.038,
                               fontStyle: 'normal',
+                              fontWeight: 'bold',
                               color: COLORS.ORANGE,
                               // marginBottom: height * 0.03,
                             }}>
@@ -227,6 +229,7 @@ function AppMainStack() {
           headerShown: false,
         }}>
         <Stack.Screen name="AppStackTabs" component={AppTabNavigator} />
+        <Stack.Screen name="NewDetails" component={NewDetails} />
       </Stack.Navigator>
     </>
   );
