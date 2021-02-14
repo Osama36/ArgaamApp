@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';
-import React, { useState } from 'react';
-import { View, Text, Image, Dimensions } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React, {useState} from 'react';
+import {View, Text, Image, Dimensions} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import { icons } from '../utils/assets';
+import {icons} from '../utils/assets';
 import COLORS from '../styles/colors';
 
 // Tab Screens
@@ -17,16 +17,12 @@ import More from '../screens/More';
 // Stack Screens
 import Login from '../screens/Login';
 
-
-
-
-
 import SafeArea from 'react-native-safe-area';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const bottomTabs = [
   {
@@ -60,7 +56,6 @@ const bottomTabs = [
     component: Companies,
     iconActive: icons.companies,
     iconInactive: icons.companies,
-
   },
   {
     id: 1,
@@ -69,12 +64,11 @@ const bottomTabs = [
     component: Home,
     iconActive: icons.home,
     iconInactive: icons.home,
-
   },
 ];
 
 const ScreenSettings = {
-  tabBarCofficient: 0.08,
+  tabBarCofficient: 0.09,
 };
 
 function AppTabNavigator() {
@@ -90,60 +84,66 @@ function AppTabNavigator() {
         tabBarOptions={{
           style: {
             height: height * ScreenSettings.tabBarCofficient + bottomInsets,
-            backgroundColor: COLORS.PRIMARY_BG,
+
+            backgroundColor: 'Pink',
             justifyContent: 'center',
             alignItems: 'center',
-            shadowOpacity: 0,
-            shadowColor: 'red',
+
+            // borderTopWidth: width * 0.0025,
+            // borderLeftWidth: width * 0.001,
+            // borderRightWidth: width * 0.0001,
+            // borderTopLeftRadius: 15,
+            // borderTopRightRadius: 15,
+            // position: 'absolute',
+            // overflow: 'visible',
           },
           tabStyle: {
             backgroundColor: COLORS.PRIMARY_BG,
-            shadowOpacity: 0,
-          }
+            // borderTopLeftRadius: 15,
+            // borderTopRightRadius: 15,
+            //shadowOpacity: 0,
+          },
         }}>
         {bottomTabs.map((value) => {
           return (
             <Tab.Screen
               name={value.name}
               component={value.component}
-
               options={{
-                style: { backgroundColor: 'red' },
+                style: {backgroundColor: 'red'},
                 tabBarLabel: '',
-                tabBarIcon: ({ focused }) => {
+                tabBarIcon: ({focused}) => {
                   if (focused == true) {
-
                     return (
                       <>
                         <View
                           style={{
                             height: height * 0.15,
                             width: width * 0.2,
-                            marginBottom: height * 0.05,
+                            marginBottom: height * 0.045,
                             // backgroundColor: COLORS.PRIMARY_BG,
-                            // backgroundColor: 'red',
+                            //backgroundColor: 'red',
                             justifyContent: 'center',
                             alignItems: 'center',
-
                           }}>
                           <View
                             style={{
-                              height: width * 0.1,
-                              width: width * 0.1,
-                              borderRadius: width * 0.1 / 2,
-                              borderWidth: width * 0.01,
-                              borderColor: COLORS.WHITE,
+                              height: width * 0.12,
+                              width: width * 0.12,
+                              borderRadius: (width * 0.12) / 2,
+                              //borderWidth: width * 0.013,
+                              //borderColor: COLORS.WHITE,
                               justifyContent: 'center',
                               alignItems: 'center',
                               marginVertical: height * 0.02,
-                              backgroundColor: COLORS.ORANGE ,
+                              backgroundColor: COLORS.ORANGE,
                             }}>
                             <Image
                               style={{
-                                height: '60%',
-                                width: '60%',
+                                height: '70%',
+                                width: '70%',
                                 resizeMode: 'contain',
-                                tintColor: COLORS.WHITE
+                                tintColor: COLORS.WHITE,
                               }}
                               source={value.iconActive}
                             />
@@ -160,51 +160,53 @@ function AppTabNavigator() {
                         </View>
                       </>
                     );
-
                   } else if (focused == false) {
-
                     return (
                       <>
                         <View
                           style={{
-                            height: height * 0.065,
+                            height: height * 0.15,
                             width: width * 0.2,
-                            backgroundColor: COLORS.PRIMARY_BG,
-                            // backgroundColor: 'lightblue',
+                            marginTop: height * 0.02,
+                            // backgroundColor: COLORS.PRIMARY_BG,
+                            // backgroundColor: 'red',
                             justifyContent: 'center',
                             alignItems: 'center',
                           }}>
                           <View
                             style={{
-                              height: '100%',
-                              width: width * 0.2,
+                              height: width * 0.11,
+                              width: width * 0.11,
+                              borderRadius: (width * 0.11) / 2,
+                              //borderWidth: width * 0.013,
+                              //borderColor: COLORS.WHITE,
                               justifyContent: 'center',
                               alignItems: 'center',
+                              marginVertical: height * 0.02,
+                              backgroundColor: '#F5F5F5',
                             }}>
                             <Image
                               style={{
-                                height: '55%',
-                                width: '60%',
+                                height: '70%',
+                                width: '70%',
                                 resizeMode: 'contain',
-                                marginTop: height * 0.02,
-                                tintColor: COLORS.TEXTGREY
+                                tintColor: '#929497',
                               }}
-                              source={value.iconInactive}
+                              source={value.iconActive}
                             />
                           </View>
                           {/* <Text
-                              style={{
-                                fontSize: width * 0.028,
-                                fontStyle: 'normal',
-                                color: '#919191',
-                                marginBottom: height * 0.01,
-                              }}>
-                              {value.barName}
-                            </Text> */}
+                            style={{
+                              fontSize: width * 0.035,
+                              fontStyle: 'normal',
+                              color: COLORS.ORANGE,
+                              // marginBottom: height * 0.03,
+                            }}>
+                            {value.barName}
+                          </Text> */}
                         </View>
                       </>
                     );
-
                   }
                 },
               }}
@@ -225,7 +227,6 @@ function AppMainStack() {
           headerShown: false,
         }}>
         <Stack.Screen name="AppStackTabs" component={AppTabNavigator} />
-
       </Stack.Navigator>
     </>
   );
