@@ -10,7 +10,7 @@ export default class StyleSheetFactory {
         flex: 1,
         backgroundColor: COLORS.PRIMARY_BG,
         zIndex: 999,
-        paddingTop: height * 0.03,
+        //paddingTop: height * 0.03,
       },
       InnerCont: {
         height: height * 0.96,

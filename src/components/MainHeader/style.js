@@ -44,7 +44,7 @@ export default class StyleSheetFactory {
         height: '45%',
       },
       LogoContainer: {
-        // backgroundColor: 'red',
+        //backgroundColor: 'red',
         width: '40%',
         height: '90%',
         alignItems: 'center',

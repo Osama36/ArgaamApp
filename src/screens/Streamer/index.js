@@ -15,9 +15,7 @@ import {useColorScheme} from 'react-native-appearance';
 import styles from './style';
 import {light, dark} from '../../styles/colors';
 import {icons} from '../../utils/assets';
-import AppInput from '../../components/AppInput';
-import Button from '../../components/Button';
-
+import MainHeader from '../../components/MainHeader';
 console.log('lol');
 
 export default function index(props) {
@@ -25,6 +23,20 @@ export default function index(props) {
   const COLORS = currentMode == 'light' ? light : dark;
   return (
     <View style={styles.getSheet(COLORS).container}>
+      <MainHeader
+        isCountry={false}
+        isMutipleLeftImage={false}
+        isTextHeader={true}
+        leftIcon={icons.Search}
+        rightIcon={icons.Search}
+        rightIconFired={() => alert('uploaded')}
+        LeftIconFired={() => alert('LefticonFired')}
+        LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        LeftMoreIconFired={() => alert('LeftMoreIconFired')}
+        text={'نبز ارقم'}
+        navigation={props.navigation}
+      />
       <View style={styles.getSheet(COLORS).SecondaryContBg} />
       <View style={styles.getSheet(COLORS).InnerCont}>{/* JSX HERE */}</View>
     </View>
