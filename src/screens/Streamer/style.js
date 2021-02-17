@@ -30,6 +30,82 @@ export default class StyleSheetFactory {
         backgroundColor: COLORS.LIGHTGREY,
         opacity: COLORS.LIGHTGREY == '#2B2E3D' ? 0.5 : 1,
       },
+      FlatListItem: {
+        width: '100%',
+        height: height * 0.12,
+        marginBottom: height * 0.01,
+        flexDirection: 'row-reverse',
+        backgroundColor: COLORS.PRIMARY_BG,
+        borderRadius: width * 0.05,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: '2.5%',
+      },
+      StoryImgCont: {
+        height: '85%',
+        width: '20%',
+      },
+      StoryDetails: {
+        width: '75%',
+        height: '95%',
+        alignItems: 'flex-end',
+        justifyContent: 'space-around',
+      },
+      StoryTitle: {
+        fontSize: width * 0.03,
+      },
+      StoryTime: {
+        fontSize: width * 0.03,
+        color: COLORS.GREY_BG,
+      },
+      FlatListImage: {
+        width: '100%',
+        height: '100%',
+        borderRadius: width * 0.03,
+      },
+      FlatListStatsCont: {
+        width: '30%',
+        height: '100%',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+      },
+      FlatlistBottomCont: {
+        height: '20%',
+        flexDirection: 'row-reverse',
+        width: '100%',
+        justifyContent: 'space-between',
+      },
+      TimeContainer: {
+        width: '30%',
+        alignItems: 'center',
+        height: '100%',
+        flexDirection: 'row-reverse',
+        justifyContent: 'space-around',
+      },
+      ClockCont: {
+        width: '30%',
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      ClockImg: {
+        resizeMode: 'contain',
+        height: '60%',
+        width: '60%',
+      },
+      ClockImg1: {
+        resizeMode: 'contain',
+        height: '100%',
+        width: '95%',
+        //backgroundColor: 'red',
+      },
+      ClockImg2: {
+        resizeMode: 'contain',
+        height: '72%',
+        width: '72%',
+        //backgroundColor: 'red',
+      },
     });
   }
 }

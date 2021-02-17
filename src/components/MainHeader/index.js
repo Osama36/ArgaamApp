@@ -131,6 +131,7 @@ export default function index(props) {
                       alignSelf: 'center',
                       fontWeight: 'bold',
                       fontSize: width * 0.065,
+                      color: COLORS.BLACKWHITE,
                     }}>
                     {props.text}
                   </Text>
