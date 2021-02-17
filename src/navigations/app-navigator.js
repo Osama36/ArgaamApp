@@ -3,9 +3,13 @@ import React, {useState} from 'react';
 import {View, Text, Image, Dimensions} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import SafeArea from 'react-native-safe-area';
+
+// third party
+import {useColorScheme} from 'react-native-appearance';
 
 import {icons} from '../utils/assets';
-import COLORS from '../styles/colors';
+import {light, dark} from '../styles/colors';
 
 // Tab Screens
 import Home from '../screens/Home';
@@ -17,8 +21,6 @@ import More from '../screens/More';
 // Stack Screens
 import Login from '../screens/Login';
 import NewDetails from '../screens/NewDetails';
-
-import SafeArea from 'react-native-safe-area';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -73,6 +75,8 @@ const ScreenSettings = {
 };
 
 function AppTabNavigator() {
+  const currentMode = useColorScheme();
+  const COLORS = currentMode == 'light' ? light : dark;
   const [bottomInsets, setBottomInsets] = useState(0);
   SafeArea.getSafeAreaInsetsForRootView().then((res) =>
     setBottomInsets(res.safeAreaInsets.bottom),
@@ -185,7 +189,7 @@ function AppTabNavigator() {
                               justifyContent: 'center',
                               alignItems: 'center',
                               marginVertical: height * 0.02,
-                              backgroundColor: '#F5F5F5',
+                              backgroundColor: COLORS.INACTIVETAB,
                             }}>
                             <Image
                               style={{

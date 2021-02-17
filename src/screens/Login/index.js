@@ -1,46 +1,57 @@
 import React from 'react';
-import { SafeAreaView, Text, View, TouchableOpacity, Image, KeyboardAvoidingView } from 'react-native';
-import styles from './style';
-import COLORS from '../../styles/colors'
-import { icons } from '../../utils/assets'
-import AppInput from '../../components/AppInput'
-import Button from '../../components/Button'
+import {
+  SafeAreaView,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  KeyboardAvoidingView,
+} from 'react-native';
 
-console.log('lol');
+// third party
+import {useColorScheme} from 'react-native-appearance';
+
+//local
+import styles from './style';
+import {light, dark} from '../../styles/colors';
+import {icons} from '../../utils/assets';
+import AppInput from '../../components/AppInput';
+import Button from '../../components/Button';
 
 export default function index(props) {
+  const currentMode = useColorScheme();
+  const COLORS = currentMode == 'light' ? light : dark;
   return (
-
-    <View style={styles.container}>
-      <View style={styles.SecondaryContBg} />
-      <View style={styles.InnerCont}>
+    <View style={styles.getSheet(COLORS).container}>
+      <View style={styles.getSheet(COLORS).SecondaryContBg} />
+      <View style={styles.getSheet(COLORS).InnerCont}>
         {/* JSX HERE */}
-        <TouchableOpacity style={styles.BackBtnCont}>
-          <Image source={icons.BackArrow} style={styles.BackBtn} resizeMode='contain' />
+        <TouchableOpacity style={styles.getSheet(COLORS).BackBtnCont}>
+          <Image
+            source={icons.BackArrow}
+            style={styles.getSheet(COLORS).BackBtn}
+            resizeMode="contain"
+          />
         </TouchableOpacity>
-        <View style={styles.LogoCont}>
-          <Image source={icons.Logo} style={styles.BackBtn} resizeMode='contain' />
+        <View style={styles.getSheet(COLORS).LogoCont}>
+          <Image
+            source={icons.Logo}
+            style={styles.getSheet(COLORS).BackBtn}
+            resizeMode="contain"
+          />
         </View>
-        <Text style={styles.Heading}>
-          أهلابك!
-        </Text>
-        <Text style={styles.HeadingDesc}>
+        <Text style={styles.getSheet(COLORS).Heading}>أهلابك!</Text>
+        <Text style={styles.getSheet(COLORS).HeadingDesc}>
           أدخل التفاصيل الخاصة بك للبدء
         </Text>
 
-        <AppInput
-          icon={icons.email}
-          placeholderText="البريد الإلكتروني"
-        />
-        <AppInput
-          icon={icons.password}
-          placeholderText="كلمه السر"
-        />
-        <View style={styles.CheckCont}>
-          <Text style={styles.CheckText}>تذكر</Text>
-          <TouchableOpacity style={styles.Check} />
+        <AppInput icon={icons.email} placeholderText="البريد الإلكتروني" />
+        <AppInput icon={icons.password} placeholderText="كلمه السر" />
+        <View style={styles.getSheet(COLORS).CheckCont}>
+          <Text style={styles.getSheet(COLORS).CheckText}>تذكر</Text>
+          <TouchableOpacity style={styles.getSheet(COLORS).Check} />
         </View>
-        <View style={styles.BtnCont}>
+        <View style={styles.getSheet(COLORS).BtnCont}>
           <Button
             BgColor={COLORS.ORANGE}
             Text="تسجيل الدخول"
@@ -48,34 +59,47 @@ export default function index(props) {
             onPress={() => props.navigation.navigate('TabNavigator')}
           />
         </View>
-        <View style={styles.Seprator}>
-          <View style={styles.Line} />
-          <Text style={styles.OrText}>أو</Text>
-          <View style={styles.Line} />
+        <View style={styles.getSheet(COLORS).Seprator}>
+          <View style={styles.getSheet(COLORS).Line} />
+          <Text style={styles.getSheet(COLORS).OrText}>أو</Text>
+          <View style={styles.getSheet(COLORS).Line} />
         </View>
-        <View style={styles.SocialCont}>
-          <TouchableOpacity style={styles.SocialBtn}>
-            <Image source={icons.Gmail} style={styles.SocialLogo} resizeMode='contain' />
+        <View style={styles.getSheet(COLORS).SocialCont}>
+          <TouchableOpacity style={styles.getSheet(COLORS).SocialBtn}>
+            <Image
+              source={icons.Gmail}
+              style={styles.getSheet(COLORS).SocialLogo}
+              resizeMode="contain"
+            />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.SocialBtn}>
-            <Image source={icons.Apple} style={styles.SocialLogo} resizeMode='contain' />
+          <TouchableOpacity style={styles.getSheet(COLORS).SocialBtn}>
+            <Image
+              source={icons.Apple}
+              style={styles.getSheet(COLORS).SocialLogo}
+              resizeMode="contain"
+            />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.SocialBtn}>
-            <Image source={icons.Facebook} style={styles.SocialLogo} resizeMode='contain' />
+          <TouchableOpacity style={styles.getSheet(COLORS).SocialBtn}>
+            <Image
+              source={icons.Facebook}
+              style={styles.getSheet(COLORS).SocialLogo}
+              resizeMode="contain"
+            />
           </TouchableOpacity>
         </View>
-        <View style={styles.BottomCont}>
+        <View style={styles.getSheet(COLORS).BottomCont}>
           <TouchableOpacity>
-            <Text style={styles.BottomContText}>نسيت كلمة السر؟</Text>
+            <Text style={styles.getSheet(COLORS).BottomContText}>
+              نسيت كلمة السر؟
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.BottomContText}>نسيت كلمة السر؟</Text>
+            <Text style={styles.getSheet(COLORS).BottomContText}>
+              نسيت كلمة السر؟
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
     </View>
-  )
+  );
 }
-
-
-

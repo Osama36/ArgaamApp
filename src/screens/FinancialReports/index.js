@@ -7,15 +7,21 @@ import {
   Image,
   KeyboardAvoidingView,
 } from 'react-native';
+
+// third party
+import {useColorScheme} from 'react-native-appearance';
+//local
 import styles from './style';
-import COLORS from '../../styles/colors';
+import {light, dark} from '../../styles/colors';
 import {icons} from '../../utils/assets';
 
 export default function index(props) {
+  const currentMode = useColorScheme();
+  const COLORS = currentMode == 'light' ? light : dark;
   return (
-    <View style={styles.container}>
-      <View style={styles.SecondaryContBg} />
-      <View style={styles.InnerCont}>{/* JSX HERE */}</View>
+    <View style={styles.getSheet(COLORS).container}>
+      <View style={styles.getSheet(COLORS).SecondaryContBg} />
+      <View style={styles.getSheet(COLORS).InnerCont}>{/* JSX HERE */}</View>
     </View>
   );
 }

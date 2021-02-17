@@ -8,8 +8,13 @@ import {
   Dimensions,
   ImageBackground,
 } from 'react-native';
+
+// third party
+import {useColorScheme} from 'react-native-appearance';
+
+//local
 import styles from './style';
-import COLORS from '../../styles/colors';
+import {light, dark} from '../../styles/colors';
 import {icons} from '../../utils/assets';
 import MainHeader from '../../components/MainHeader';
 
@@ -65,41 +70,58 @@ const data = [
 ];
 
 export default function index(props) {
+  const currentMode = useColorScheme();
+  const COLORS = currentMode == 'light' ? light : dark;
+  
   const _renderItem = ({item, index}) => {
     return (
       <View
         // activeOpacity={10}
-        style={styles.CarouselItem}>
+        style={styles.getSheet(COLORS).CarouselItem}>
         <ImageBackground
           source={item.image}
           resizeMode="stretch"
           style={{width: '100%', height: '100%', alignItems: 'flex-end'}}>
-          <View style={styles.CarouselInner}>
-            <View style={styles.CarouselRow}>
+          <View style={styles.getSheet(COLORS).CarouselInner}>
+            <View style={styles.getSheet(COLORS).CarouselRow}>
               <Text style={{color: COLORS.ORANGE, fontWeight: 'bold'}}>
                 {item.author}
               </Text>
-              <View style={styles.SmallSeperator} />
+              <View style={styles.getSheet(COLORS).SmallSeperator} />
               <Text style={{color: COLORS.WHITE}}>{item.date}</Text>
             </View>
-            <Text style={styles.CarouselTitle}>{item.title}</Text>
-            <View style={styles.CarouselBottomRow}>
-              <View style={styles.TimeContainer}>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.timewhite} style={styles.ClockImg} />
+            <Text style={styles.getSheet(COLORS).CarouselTitle}>
+              {item.title}
+            </Text>
+            <View style={styles.getSheet(COLORS).CarouselBottomRow}>
+              <View style={styles.getSheet(COLORS).TimeContainer}>
+                <View style={styles.getSheet(COLORS).ClockCont}>
+                  <Image
+                    source={icons.timewhite}
+                    style={styles.getSheet(COLORS).ClockImg}
+                  />
                 </View>
                 <Text style={{color: COLORS.WHITE}}>{item.time}</Text>
               </View>
-              <View style={styles.StatsCont}>
+              <View style={styles.getSheet(COLORS).StatsCont}>
                 <Text style={{color: COLORS.WHITE}}>{item.commentcount}</Text>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.messagewhite} style={styles.ClockImg} />
+                <View style={styles.getSheet(COLORS).ClockCont}>
+                  <Image
+                    source={icons.messagewhite}
+                    style={styles.getSheet(COLORS).ClockImg}
+                  />
                 </View>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.likewhite} style={styles.ClockImg} />
+                <View style={styles.getSheet(COLORS).ClockCont}>
+                  <Image
+                    source={icons.likewhite}
+                    style={styles.getSheet(COLORS).ClockImg}
+                  />
                 </View>
-                <View style={styles.ClockCont}>
-                  <Image source={icons.uploadwhite} style={styles.ClockImg} />
+                <View style={styles.getSheet(COLORS).ClockCont}>
+                  <Image
+                    source={icons.uploadwhite}
+                    style={styles.getSheet(COLORS).ClockImg}
+                  />
                 </View>
               </View>
             </View>
@@ -110,7 +132,7 @@ export default function index(props) {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.getSheet(COLORS).container}>
       <MainHeader
         isCountry={true}
         leftIcon={icons.Search}
@@ -123,33 +145,37 @@ export default function index(props) {
         // text={'news'}
         navigation={props.navigation}
       />
-      <View style={styles.SecondaryContBg} />
-      <View style={styles.InnerCont}>
-        <View style={styles.DataCont}>
-          <View style={styles.RightCont}>
-            <View style={styles.UserPic}>
+      <View style={styles.getSheet(COLORS).SecondaryContBg} />
+      <View style={styles.getSheet(COLORS).InnerCont}>
+        <View style={styles.getSheet(COLORS).DataCont}>
+          <View style={styles.getSheet(COLORS).RightCont}>
+            <View style={styles.getSheet(COLORS).UserPic}>
               <Image
                 source={icons.User}
                 resizeMode="contain"
                 style={{width: '100%', height: '100%'}}
               />
             </View>
-            <View style={styles.UserDetailsCont}>
-              <Text style={styles.UserName}>محمد عمير</Text>
-              <Text style={styles.UserDesc}>عرض الصفحة الشخصية</Text>
+            <View style={styles.getSheet(COLORS).UserDetailsCont}>
+              <Text style={styles.getSheet(COLORS).UserName}>محمد عمير</Text>
+              <Text style={styles.getSheet(COLORS).UserDesc}>
+                عرض الصفحة الشخصية
+              </Text>
             </View>
           </View>
-          <View style={styles.LeftCont}>
-            <View style={styles.UserPic}>
+          <View style={styles.getSheet(COLORS).LeftCont}>
+            <View style={styles.getSheet(COLORS).UserPic}>
               <Image
                 source={icons.Amount}
                 resizeMode="contain"
                 style={{width: '70%', height: '70%'}}
               />
             </View>
-            <View style={styles.UserDetailsCont}>
-              <Text style={styles.AmountLabel}>الرصيد الحالي</Text>
-              <Text style={styles.Amount}>20.25</Text>
+            <View style={styles.getSheet(COLORS).UserDetailsCont}>
+              <Text style={styles.getSheet(COLORS).AmountLabel}>
+                الرصيد الحالي
+              </Text>
+              <Text style={styles.getSheet(COLORS).Amount}>20.25</Text>
             </View>
           </View>
         </View>
@@ -166,8 +192,8 @@ export default function index(props) {
           style={{marginTop: height * 0.02}}
           renderItem={({item}) => {
             return (
-              <View style={styles.MenuRow}>
-                <View style={styles.MenuIconCont}>
+              <View style={styles.getSheet(COLORS).MenuRow}>
+                <View style={styles.getSheet(COLORS).MenuIconCont}>
                   <Image
                     source={item.icon}
                     resizeMode="contain"
@@ -175,13 +201,15 @@ export default function index(props) {
                   />
                 </View>
                 <View style={{height: '50%', width: '60%'}}>
-                  <Text style={styles.MenuLabel}>{item.text}</Text>
+                  <Text style={styles.getSheet(COLORS).MenuLabel}>
+                    {item.text}
+                  </Text>
                 </View>
-                <View style={styles.MenuIconCont}>
+                <View style={styles.getSheet(COLORS).MenuIconCont}>
                   <Image
                     source={icons.BackArrow}
                     resizeMode="contain"
-                    style={styles.ArrowIcon}
+                    style={styles.getSheet(COLORS).ArrowIcon}
                   />
                 </View>
               </View>
