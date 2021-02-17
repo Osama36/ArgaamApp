@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
-let mode = 'LIGHT';
+let mode = 'sad';
 
 export default COLORS =
   mode == 'LIGHT'
@@ -59,5 +59,5 @@ export const light = {
   ORANGELIGHT: '#F5B826',
   TEXTGREY: '#929497',
   BLACKWHITE: '#000',
-  INACTIVETAB: '#F5F5F5', //#F5F5F5
+INACTIVETAB: '#F5F5F5', //#F5F5F5
 };

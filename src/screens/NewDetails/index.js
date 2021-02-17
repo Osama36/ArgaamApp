@@ -9,16 +9,24 @@ import {
   ImageBackground,
   ScrollView,
 } from 'react-native';
+
+// third party
+import {useColorScheme} from 'react-native-appearance';
+
+//local
 import styles from './style';
-import COLORS from '../../styles/colors';
+import COLORS, {light, dark} from '../../styles/colors';
 import {icons} from '../../utils/assets';
 import MainHeader from '../../components/MainHeader';
 
+// dimenstion
 const {width, height} = Dimensions.get('window');
 
 export default function index(props) {
+  const currentMode = useColorScheme();
+  const COLORS = currentMode == 'light' ? light : dark;
   return (
-    <View style={styles.container}>
+    <View style={styles.getSheet(COLORS).container}>
       <MainHeader
         isCountry={false}
         isMutipleLeftImage={true}
@@ -32,32 +40,112 @@ export default function index(props) {
         // text={'news'}
         navigation={props.navigation}
       />
-      <View style={styles.SecondaryContBg} />
-      <View style={styles.InnerCont}>
-        <ScrollView style={styles.scrollView}>
-          <View style={styles.img1Container}>
-            <Image style={styles.img1} source={icons.Details01} />
+      <View style={styles.getSheet(COLORS).SecondaryContBg} />
+      <View style={styles.getSheet(COLORS).InnerCont}>
+        <ScrollView style={styles.getSheet(COLORS).scrollView}>
+          <View style={styles.getSheet(COLORS).img1Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img1}
+                source={icons.Details01}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img1}
+                source={icons.Details01}
+              />
+            )}
           </View>
-          <View style={styles.img2Container}>
-            <Image style={styles.img2} source={icons.Details02} />
+          <View style={styles.getSheet(COLORS).img2Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img2}
+                source={icons.Details02}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img2}
+                source={icons.DARKDetails01}
+              />
+            )}
           </View>
-          <View style={styles.img3Container}>
-            <Image style={styles.img3} source={icons.Details03} />
+          <View style={styles.getSheet(COLORS).img3Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img3}
+                source={icons.Details03}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img3}
+                source={icons.DARKDetails02}
+              />
+            )}
           </View>
-          <View style={styles.img4Container}>
-            <Image style={styles.img4} source={icons.Details04} />
+          <View style={styles.getSheet(COLORS).img4Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img4}
+                source={icons.Details04}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img4}
+                source={icons.DARKDetails03}
+              />
+            )}
           </View>
-          <View style={styles.img5Container}>
-            <Image style={styles.img5} source={icons.Details08} />
+          <View style={styles.getSheet(COLORS).img5Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.Details08}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.DARKDetails04}
+              />
+            )}
           </View>
-          <View style={styles.img5Container}>
-            <Image style={styles.img5} source={icons.Details05} />
+          <View style={styles.getSheet(COLORS).img5Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.Details05}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.DARKDetails05}
+              />
+            )}
           </View>
-          <View style={styles.img5Container}>
-            <Image style={styles.img5} source={icons.Details06} />
+          <View style={styles.getSheet(COLORS).img5Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.Details06}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.DARKDetails06}
+              />
+            )}
           </View>
-          <View style={styles.img5Container}>
-            <Image style={styles.img5} source={icons.Details07} />
+          <View style={styles.getSheet(COLORS).img5Container}>
+            {currentMode == 'light' ? (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.Details07}
+              />
+            ) : (
+              <Image
+                style={styles.getSheet(COLORS).img5}
+                source={icons.DARKDetails07}
+              />
+            )}
           </View>
         </ScrollView>
       </View>

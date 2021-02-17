@@ -44,4 +44,11 @@ export const icons = {
   Details06: require(`${ICON_PATH}Details6.png`),
   Details07: require(`${ICON_PATH}Details7.png`),
   Details08: require(`${ICON_PATH}Details8.png`),
+  DARKDetails01: require(`${ICON_PATH}dDetails1.png`),
+  DARKDetails02: require(`${ICON_PATH}dDetails2.png`),
+  DARKDetails03: require(`${ICON_PATH}dDetails3.png`),
+  DARKDetails04: require(`${ICON_PATH}dDetails4.png`),
+  DARKDetails05: require(`${ICON_PATH}dDetails5.png`),
+  DARKDetails06: require(`${ICON_PATH}dDetails6.png`),
+  DARKDetails07: require(`${ICON_PATH}dDetails7.png`),
 };
