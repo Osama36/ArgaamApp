@@ -123,11 +123,20 @@ export default function index(props) {
         LeftLikeIconFired={() => alert('LeftLikeIconFired')}
         LeftArrowIconFired={() => alert('LeftArrowIconFired')}
         LeftMoreIconFired={() => alert('LeftMoreIconFired')}
-        text={'نبز ارقم'}
+        text={'أرقام التنبيه'}
         navigation={props.navigation}
       />
       <View style={styles.getSheet(COLORS).SecondaryContBg} />
-      <View style={styles.getSheet(COLORS).InnerCont}>
+      <View
+        style={[
+          styles.getSheet(COLORS).InnerCont,
+          {paddingTop: height * 0.02},
+        ]}>
+        <View style={styles.getSheet(COLORS).headingContainer}>
+          <Text style={{fontWeight: 'bold', color: COLORS.RED}}>
+            آخر إشعار كان في 5 دقائق مضت
+          </Text>
+        </View>
         {
           <FlatList
             data={data}

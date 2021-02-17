@@ -30,6 +30,16 @@ export default class StyleSheetFactory {
         backgroundColor: COLORS.LIGHTGREY,
         opacity: COLORS.LIGHTGREY == '#2B2E3D' ? 0.5 : 1,
       },
+      headingContainer: {
+        width: '95%',
+        height: height * 0.05,
+        backgroundColor: COLORS.PRIMARY_BG,
+        marginBottom: height * 0.01,
+        borderRadius: width * 0.05,
+        alignItems: 'center',
+        alignSelf: 'center',
+        justifyContent: 'center',
+      },
       FlatListItem: {
         width: '100%',
         height: height * 0.12,
