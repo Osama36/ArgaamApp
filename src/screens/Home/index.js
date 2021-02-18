@@ -316,90 +316,99 @@ export default function index(props) {
             activeSlideAlignment="center"
           />
         </View>
-
-        <FlatList
-          data={data}
-          keyExtractor={(item) => item.key}
-          contentContainerStyle={{width: '95%', alignSelf: 'center'}}
-          style={{marginBottom: height * 0.2, marginTop: height * 0.02}}
-          renderItem={({item}) => {
-            return (
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate('NewDetails')}
-                style={styles.getSheet(COLORS).FlatListItem}>
-                <View style={styles.getSheet(COLORS).StoryImgCont}>
-                  <Image
-                    source={item.image}
-                    style={styles.getSheet(COLORS).FlatListImage}
-                    resizeMode="cover"
-                  />
-                </View>
-                <View style={styles.getSheet(COLORS).StoryDetails}>
-                  <Text
-                    style={[
-                      styles.getSheet(COLORS).StoryTitle,
-                      {color: COLORS.TEXTGREY},
-                    ]}>
-                    {item.date}
-                  </Text>
-                  <Text
-                    style={[
-                      styles.getSheet(COLORS).StoryTitle,
-                      {color: COLORS.BLACKWHITE},
-                    ]}>
-                    {item.title}
-                  </Text>
-                  <View style={styles.getSheet(COLORS).FlatlistBottomCont}>
-                    <View style={styles.getSheet(COLORS).TimeContainer}>
-                      <View style={styles.getSheet(COLORS).ClockCont}>
-                        <Image
-                          source={icons.timewhite}
-                          style={[
-                            styles.getSheet(COLORS).ClockImg2,
-                            {tintColor: COLORS.TEXTGREY},
-                          ]}
-                        />
+        <View
+          style={{
+            //backgroundColor: 'red',
+            flex: 1,
+            marginBottom: height * 0.185,
+            marginTop: height * 0.015,
+          }}>
+          <FlatList
+            data={data}
+            keyExtractor={(item) => item.key}
+            contentContainerStyle={{width: '95%', alignSelf: 'center'}}
+            style={{}}
+            renderItem={({item}) => {
+              return (
+                <TouchableOpacity
+                  onPress={() => props.navigation.navigate('NewDetails')}
+                  style={styles.getSheet(COLORS).FlatListItem}>
+                  <View style={styles.getSheet(COLORS).StoryImgCont}>
+                    <Image
+                      source={item.image}
+                      style={styles.getSheet(COLORS).FlatListImage}
+                      resizeMode="cover"
+                    />
+                  </View>
+                  <View style={styles.getSheet(COLORS).StoryDetails}>
+                    <Text
+                      style={[
+                        styles.getSheet(COLORS).StoryTitle,
+                        {color: COLORS.TEXTGREY},
+                      ]}>
+                      {item.date}
+                    </Text>
+                    <Text
+                      style={[
+                        styles.getSheet(COLORS).StoryTitle,
+                        {color: COLORS.BLACKWHITE},
+                      ]}>
+                      {item.title}
+                    </Text>
+                    <View style={styles.getSheet(COLORS).FlatlistBottomCont}>
+                      <View style={styles.getSheet(COLORS).TimeContainer}>
+                        <View style={styles.getSheet(COLORS).ClockCont}>
+                          <Image
+                            source={icons.timewhite}
+                            style={[
+                              styles.getSheet(COLORS).ClockImg2,
+                              {tintColor: COLORS.TEXTGREY},
+                            ]}
+                          />
+                        </View>
+                        <Text style={{color: COLORS.TEXTGREY}}>
+                          {item.time}
+                        </Text>
                       </View>
-                      <Text style={{color: COLORS.TEXTGREY}}>{item.time}</Text>
-                    </View>
-                    <View style={styles.getSheet(COLORS).FlatListStatsCont}>
-                      <Text style={{color: COLORS.TEXTGREY}}>
-                        {item.commentcount}
-                      </Text>
-                      <View style={styles.getSheet(COLORS).ClockCont}>
-                        <Image
-                          source={icons.messagewhite}
-                          style={[
-                            styles.getSheet(COLORS).ClockImg1,
-                            {tintColor: COLORS.TEXTGREY},
-                          ]}
-                        />
-                      </View>
-                      <View style={styles.getSheet(COLORS).ClockCont}>
-                        <Image
-                          source={icons.likewhite}
-                          style={[
-                            styles.getSheet(COLORS).ClockImg1,
-                            {tintColor: COLORS.TEXTGREY},
-                          ]}
-                        />
-                      </View>
-                      <View style={styles.getSheet(COLORS).ClockCont}>
-                        <Image
-                          source={icons.uploadwhite}
-                          style={[
-                            styles.getSheet(COLORS).ClockImg1,
-                            {tintColor: COLORS.TEXTGREY},
-                          ]}
-                        />
+                      <View style={styles.getSheet(COLORS).FlatListStatsCont}>
+                        <Text style={{color: COLORS.TEXTGREY}}>
+                          {item.commentcount}
+                        </Text>
+                        <View style={styles.getSheet(COLORS).ClockCont}>
+                          <Image
+                            source={icons.messagewhite}
+                            style={[
+                              styles.getSheet(COLORS).ClockImg1,
+                              {tintColor: COLORS.TEXTGREY},
+                            ]}
+                          />
+                        </View>
+                        <View style={styles.getSheet(COLORS).ClockCont}>
+                          <Image
+                            source={icons.likewhite}
+                            style={[
+                              styles.getSheet(COLORS).ClockImg1,
+                              {tintColor: COLORS.TEXTGREY},
+                            ]}
+                          />
+                        </View>
+                        <View style={styles.getSheet(COLORS).ClockCont}>
+                          <Image
+                            source={icons.uploadwhite}
+                            style={[
+                              styles.getSheet(COLORS).ClockImg1,
+                              {tintColor: COLORS.TEXTGREY},
+                            ]}
+                          />
+                        </View>
                       </View>
                     </View>
                   </View>
-                </View>
-              </TouchableOpacity>
-            );
-          }}
-        />
+                </TouchableOpacity>
+              );
+            }}
+          />
+        </View>
       </View>
     </View>
   );
