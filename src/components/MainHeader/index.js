@@ -26,6 +26,7 @@ export default function index(props) {
     // <SafeAreaView style={{backgroundColor:"#131D2F"}}>
 
     props.isCountry ? (
+      <SafeAreaView >
       <View style={[styles.getSheet(COLORS).container]}>
         <TouchableOpacity onPress={props.LeftIconFired}>
           <View style={styles.getSheet(COLORS).leftImageContainer}>
@@ -59,9 +60,11 @@ export default function index(props) {
           </View>
         </TouchableOpacity>
       </View>
+      </SafeAreaView>
     ) : (
       [
         props.isMutipleLeftImage ? (
+          <SafeAreaView >
           <View style={styles.getSheet(COLORS).container}>
             <View style={{flexDirection: 'row'}}>
               <TouchableOpacity onPress={props.LeftMoreIconFired}>
@@ -98,9 +101,11 @@ export default function index(props) {
               />
             </View>
           </View>
+          </SafeAreaView>
         ) : (
           [
             props.isTextHeader ? (
+              <SafeAreaView>
               <View
                 style={[
                   styles.getSheet(COLORS).container,
@@ -146,6 +151,7 @@ export default function index(props) {
                   </View>
                 </TouchableOpacity>
               </View>
+              </SafeAreaView>
             ) : (
               <Text>Nikallp</Text>
             ),

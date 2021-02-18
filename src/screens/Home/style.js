@@ -133,7 +133,7 @@ export default class StyleSheetFactory {
         flexDirection: 'row-reverse',
       },
       TimeContainer: {
-        width: '30%',
+        width: '35%',
         alignItems: 'center',
         height: '100%',
         flexDirection: 'row-reverse',

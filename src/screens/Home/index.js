@@ -359,7 +359,7 @@ export default function index(props) {
                       <View style={styles.getSheet(COLORS).TimeContainer}>
                         <View style={styles.getSheet(COLORS).ClockCont}>
                           <Image
-                            source={icons.timewhite}
+                            source={icons.timewhite} 
                             style={[
                               styles.getSheet(COLORS).ClockImg2,
                               {tintColor: COLORS.TEXTGREY},
