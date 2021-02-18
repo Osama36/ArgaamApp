@@ -31,7 +31,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages1,
   },
 
   {
@@ -42,7 +41,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages2,
   },
   {
     key: 3,
@@ -52,7 +50,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages1,
   },
   {
     key: 4,
@@ -62,7 +59,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages2,
   },
   {
     key: 5,
@@ -72,7 +68,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newsimage,
   },
   {
     key: 6,
@@ -82,7 +77,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages1,
   },
 
   {
@@ -93,7 +87,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages2,
   },
   {
     key: 8,
@@ -103,7 +96,6 @@ const data = [
       'حقق مصرف الراجحي ربحاً صافياً قدره 10.2 مليار ريال للسنة المالية 2019',
     time: 'قبل 45 دقيقة',
     commentcount: 45,
-    image: icons.newssmallimages1,
   },
 ];
 
@@ -148,21 +140,9 @@ export default function index(props) {
                 <TouchableOpacity
                   onPress={() => props.navigation.navigate('NewDetails')}
                   style={styles.getSheet(COLORS).FlatListItem}>
-                  <View style={styles.getSheet(COLORS).StoryImgCont}>
-                    <Image
-                      source={item.image}
-                      style={styles.getSheet(COLORS).FlatListImage}
-                      resizeMode="cover"
-                    />
-                  </View>
+                 
                   <View style={styles.getSheet(COLORS).StoryDetails}>
-                    <Text
-                      style={[
-                        styles.getSheet(COLORS).StoryTitle,
-                        {color: COLORS.TEXTGREY},
-                      ]}>
-                      {item.date}
-                    </Text>
+                   
                     <Text
                       style={[
                         styles.getSheet(COLORS).StoryTitle,

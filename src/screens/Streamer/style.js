@@ -56,10 +56,11 @@ export default class StyleSheetFactory {
         width: '20%',
       },
       StoryDetails: {
-        width: '75%',
+        width: '100%',
         height: '95%',
         alignItems: 'flex-end',
         justifyContent: 'space-around',
+        
       },
       StoryTitle: {
         fontSize: width * 0.03,

@@ -10,16 +10,7 @@ export default class StyleSheetFactory {
         flex: 1,
         backgroundColor: COLORS.PRIMARY_BG,
         zIndex: 999,
-        paddingTop: height * 0.03,
-      },
-      InnerCont: {
-        height: height * 0.96,
-        width,
-        zIndex: 2,
-        borderTopLeftRadius: width * 0.05,
-        borderTopRightRadius: width * 0.05,
-        backgroundColor: COLORS.SECONDARY_BG,
-        paddingTop: height * 0.07,
+        paddingTop: height * 0.01,
       },
       SecondaryContBg: {
         height: height * 0.015,
@@ -29,6 +20,53 @@ export default class StyleSheetFactory {
         borderTopRightRadius: width * 0.05,
         backgroundColor: COLORS.LIGHTGREY,
         opacity: COLORS.LIGHTGREY == '#2B2E3D' ? 0.5 : 1,
+      },
+      InnerCont: {
+        height: height * 0.8,
+        width,
+        zIndex: 2,
+        borderTopLeftRadius: width * 0.05,
+        borderTopRightRadius: width * 0.05,
+        backgroundColor:COLORS.SECONDARY_BG,
+        //paddingTop: height * 0.07,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      middleCont: {
+        width: '90%',
+        height: '40%',
+        //backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      iconCont: {
+        width: '50%',
+        height: '50%',
+        //backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      bellIcon: {
+        width: '75%',
+        height: '75%',
+      },
+      txtCont: {
+        width: '90%',
+        alignItems: 'center',
+      },
+      txt1: {
+        fontSize: width * 0.045,
+        color: COLORS.BLACKWHITE,
+      },
+      txt2: {
+        marginTop: height * 0.01,
+        fontSize: width * 0.035,
+        color: COLORS.BLACKWHITE,
+      },
+      BtnCont: {
+        width: '90%',
+        alignSelf: 'center',
+        marginTop: height * 0.02,
       },
     });
   }
