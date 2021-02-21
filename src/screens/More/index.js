@@ -137,11 +137,11 @@ export default function index(props) {
         isCountry={true}
         leftIcon={icons.Search}
         rightIcon={icons.Search}
-        rightIconFired={() => alert('uploaded')}
-        LeftIconFired={() => alert('LefticonFired')}
-        LeftLikeIconFired={() => alert('LeftLikeIconFired')}
-        LeftArrowIconFired={() => alert('LeftArrowIconFired')}
-        LeftMoreIconFired={() => alert('LeftMoreIconFired')}
+        // rightIconFired={() => alert('uploaded')}
+        // LeftIconFired={() => alert('LefticonFired')}
+        // LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        // LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        // LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         // text={'news'}
         navigation={props.navigation}
       />
@@ -164,7 +164,7 @@ export default function index(props) {
             </View>
           </View>
           <View style={styles.getSheet(COLORS).LeftCont}>
-            <View style={styles.getSheet(COLORS).UserPic}>
+            <View style={[styles.getSheet(COLORS).UserPic,{paddingLeft: 10}]}>
               <Image
                 source={icons.Amount}
                 resizeMode="contain"

@@ -110,11 +110,11 @@ export default function index(props) {
         isTextHeader={true}
         leftIcon={icons.Search}
         rightIcon={icons.Search}
-        rightIconFired={() => alert('uploaded')}
-        LeftIconFired={() => alert('LefticonFired')}
-        LeftLikeIconFired={() => alert('LeftLikeIconFired')}
-        LeftArrowIconFired={() => alert('LeftArrowIconFired')}
-        LeftMoreIconFired={() => alert('LeftMoreIconFired')}
+        // rightIconFired={() => alert('uploaded')}
+        // LeftIconFired={() => alert('LefticonFired')}
+        // LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        // LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        // LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         text={'أرقام التنبيه'}
         navigation={props.navigation}
       />

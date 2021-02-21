@@ -210,11 +210,11 @@ export default function index(props) {
         isMutipleLeftImage={false}
         leftIcon={icons.Search}
         rightIcon={icons.Search}
-        rightIconFired={() => alert('uploaded')}
-        LeftIconFired={() => alert('LefticonFired')}
-        LeftLikeIconFired={() => alert('LeftLikeIconFired')}
-        LeftArrowIconFired={() => alert('LeftArrowIconFired')}
-        LeftMoreIconFired={() => alert('LeftMoreIconFired')}
+        // rightIconFired={() => alert('uploaded')}
+        // LeftIconFired={() => alert('LefticonFired')}
+        // LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        // LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        // LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         // text={'news'}
         navigation={props.navigation}
       />
