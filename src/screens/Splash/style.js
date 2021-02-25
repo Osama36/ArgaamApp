@@ -17,7 +17,7 @@ export default class StyleSheetFactory {
       image: {
         width: width * 0.2,
         height: height * 0.2,
-        backgroundColor: 'red',
+        //backgroundColor: 'red',
       },
     });
   }
