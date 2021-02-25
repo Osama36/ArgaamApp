@@ -5,7 +5,7 @@ import {
   View,
   TouchableOpacity,
   Image,
-  KeyboardAvoidingView,
+  StatusBar,
 } from 'react-native';
 
 // third party
@@ -21,8 +21,13 @@ import Button from '../../components/Button';
 export default function index(props) {
   const currentMode = useColorScheme();
   const COLORS = currentMode == 'light' ? light : dark;
+
+  const bgColor = currentMode == 'light' ? '#ffffff' : '#000000';
+  const barStyle = currentMode == 'light' ? 'dark-content' : 'light-content';
+
   return (
     <View style={styles.getSheet(COLORS).container}>
+      <StatusBar barStyle={barStyle} backgroundColor={bgColor} />
       <View style={styles.getSheet(COLORS).SecondaryContBg} />
       <View style={styles.getSheet(COLORS).InnerCont}>
         {/* JSX HERE */}

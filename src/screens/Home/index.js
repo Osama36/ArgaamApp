@@ -8,6 +8,7 @@ import {
   Dimensions,
   ImageBackground,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 
 // third party
