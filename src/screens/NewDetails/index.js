@@ -35,7 +35,7 @@ export default function index(props) {
         // rightIconFired={() => alert('uploaded')}
         // LeftIconFired={() => alert('LefticonFired')}
         // LeftLikeIconFired={() => alert('LeftLikeIconFired')}
-        // LeftArrowIconFired={() => alert('LeftArrowIconFired')}
+        LeftArrowIconFired={() => props.navigation.goBack()}
         // LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         // text={'news'}
         navigation={props.navigation}
