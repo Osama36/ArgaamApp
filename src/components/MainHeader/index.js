@@ -26,92 +26,94 @@ export default function index(props) {
     // <SafeAreaView style={{backgroundColor:"#131D2F"}}>
 
     props.isCountry ? (
-      <SafeAreaView >
-      <View style={[styles.getSheet(COLORS).container]}>
-        <TouchableOpacity onPress={props.LeftIconFired}>
-          <View style={styles.getSheet(COLORS).leftImageContainer}>
-            <Image
-              style={styles.getSheet(COLORS).leftImage}
-              source={icons.Flag}
-              resizeMode={'contain'}
-            />
-            <Image
-              style={styles.getSheet(COLORS).leftImage2}
-              source={icons.downArrow}
-              resizeMode={'contain'}
-            />
-          </View>
-        </TouchableOpacity>
+      <SafeAreaView>
+        <View style={[styles.getSheet(COLORS).container]}>
+          <TouchableOpacity onPress={props.LeftIconFired}>
+            <View style={styles.getSheet(COLORS).leftImageContainer}>
+              <Image
+                style={styles.getSheet(COLORS).leftImage}
+                source={icons.Flag}
+                resizeMode={'contain'}
+              />
+              <Image
+                style={styles.getSheet(COLORS).leftImage2}
+                source={icons.downArrow}
+                resizeMode={'contain'}
+              />
+            </View>
+          </TouchableOpacity>
 
-        <View style={[styles.getSheet(COLORS).LogoContainer]}>
-          <Image
-            style={styles.getSheet(COLORS).Logo}
-            source={icons.Logo}
-            resizeMode={'contain'}
-          />
-        </View>
-        <TouchableOpacity onPress={props.rightIconFired}>
-          <View style={styles.getSheet(COLORS).rightImageContainer}>
+          <View style={[styles.getSheet(COLORS).LogoContainer]}>
             <Image
-              style={styles.getSheet(COLORS).rightImage}
-              source={props.rightIcon}
+              style={styles.getSheet(COLORS).Logo}
+              source={icons.Logo}
               resizeMode={'contain'}
             />
           </View>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity onPress={props.rightIconFired}>
+            <View style={styles.getSheet(COLORS).rightImageContainer}>
+              <Image
+                style={styles.getSheet(COLORS).rightImage}
+                source={props.rightIcon}
+                resizeMode={'contain'}
+              />
+            </View>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     ) : (
       [
         props.isMutipleLeftImage ? (
-          <SafeAreaView >
-          <View style={styles.getSheet(COLORS).container}>
-            <View style={{flexDirection: 'row'}}>
-              <TouchableOpacity onPress={props.LeftMoreIconFired}>
-                <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
-                  <Image
-                    style={styles.getSheet(COLORS).rightImage}
-                    source={icons.verticalmore}
-                  />
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={props.LeftLikeIconFired}>
-                <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
-                  <Image
-                    style={styles.getSheet(COLORS).rightImage}
-                    source={icons.likewhite}
-                  />
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={props.LeftArrowIconFired}>
-                <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
-                  <Image
-                    style={styles.getSheet(COLORS).rightImage}
-                    source={icons.BackArrow}
-                  />
-                </View>
-              </TouchableOpacity>
-            </View>
+          <SafeAreaView>
+            <View style={styles.getSheet(COLORS).container}>
+              <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity onPress={props.LeftMoreIconFired}>
+                  <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
+                    <Image
+                      style={styles.getSheet(COLORS).rightImage}
+                      source={icons.verticalmore}
+                    />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={props.LeftLikeIconFired}>
+                  <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
+                    <Image
+                      style={styles.getSheet(COLORS).rightImage}
+                      source={icons.likewhite}
+                      tintColor={props.likeIcon ? 'red' : COLORS.TEXTGREY}
+                      //color={props.likeIcon ? 'red' : COLORS.TEXTGREY}
+                    />
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={props.LeftArrowIconFired}>
+                  <View style={styles.getSheet(COLORS).leftMultiImageContainer}>
+                    <Image
+                      style={styles.getSheet(COLORS).rightImage}
+                      source={icons.BackArrow}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </View>
 
-            <View style={styles.getSheet(COLORS).LogoContainer}>
-              <Image
-                style={styles.getSheet(COLORS).Logo}
-                source={icons.Logo}
-                resizeMode={'contain'}
-              />
+              <View style={styles.getSheet(COLORS).LogoContainer}>
+                <Image
+                  style={styles.getSheet(COLORS).Logo}
+                  source={icons.Logo}
+                  resizeMode={'contain'}
+                />
+              </View>
             </View>
-          </View>
           </SafeAreaView>
         ) : (
           [
             props.isTextHeader ? (
               <SafeAreaView>
-              <View
-                style={[
-                  styles.getSheet(COLORS).container,
-                  {justifyContent: 'flex-end'},
-                ]}>
-                {/* <TouchableOpacity onPress={props.LeftIconFired}>
+                <View
+                  style={[
+                    styles.getSheet(COLORS).container,
+                    {justifyContent: 'flex-end'},
+                  ]}>
+                  {/* <TouchableOpacity onPress={props.LeftIconFired}>
                   <View style={styles.getSheet(COLORS).leftImageContainer}>
                     <Image
                       style={styles.getSheet(COLORS).leftImage}
@@ -126,31 +128,31 @@ export default function index(props) {
                   </View>
                 </TouchableOpacity> */}
 
-                <View
-                  style={[
-                    styles.getSheet(COLORS).LogoContainer,
-                    {marginHorizontal: width * 0.17},
-                  ]}>
-                  <Text
-                    style={{
-                      alignSelf: 'center',
-                      fontWeight: 'bold',
-                      fontSize: width * 0.065,
-                      color: COLORS.BLACKWHITE,
-                    }}>
-                    {props.text}
-                  </Text>
-                </View>
-                <TouchableOpacity onPress={props.rightIconFired}>
-                  <View style={styles.getSheet(COLORS).rightImageContainer}>
-                    <Image
-                      style={styles.getSheet(COLORS).rightImage}
-                      source={props.rightIcon}
-                      resizeMode={'contain'}
-                    />
+                  <View
+                    style={[
+                      styles.getSheet(COLORS).LogoContainer,
+                      {marginHorizontal: width * 0.17},
+                    ]}>
+                    <Text
+                      style={{
+                        alignSelf: 'center',
+                        fontWeight: 'bold',
+                        fontSize: width * 0.065,
+                        color: COLORS.BLACKWHITE,
+                      }}>
+                      {props.text}
+                    </Text>
                   </View>
-                </TouchableOpacity>
-              </View>
+                  <TouchableOpacity onPress={props.rightIconFired}>
+                    <View style={styles.getSheet(COLORS).rightImageContainer}>
+                      <Image
+                        style={styles.getSheet(COLORS).rightImage}
+                        source={props.rightIcon}
+                        resizeMode={'contain'}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </View>
               </SafeAreaView>
             ) : (
               <Text>Nikallp</Text>

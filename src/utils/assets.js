@@ -53,4 +53,5 @@ export const icons = {
   DARKDetails07: require(`${ICON_PATH}dDetails7.png`),
   notification: require(`${ICON_PATH}noti.png`),
   argaamLogo: require(`${ICON_PATH}argaamLogo.png`),
+  likeorange: require(`${ICON_PATH}likeorange.png`),
 };

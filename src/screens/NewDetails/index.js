@@ -1,14 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {
-  FlatList,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  ImageBackground,
-  ScrollView,
-} from 'react-native';
+import {View, Image, Dimensions, ScrollView} from 'react-native';
 
 // third party
 import {useColorScheme} from 'react-native-appearance';
@@ -23,8 +14,12 @@ import MainHeader from '../../components/MainHeader';
 const {width, height} = Dimensions.get('window');
 
 export default function index(props) {
+  const [likeIcon, setLikeIcon] = useState(false);
   const currentMode = useColorScheme();
   const COLORS = currentMode == 'light' ? light : dark;
+
+  console.log('LikeICON state ==> ', likeIcon);
+
   return (
     <View style={styles.getSheet(COLORS).container}>
       <MainHeader
@@ -32,9 +27,12 @@ export default function index(props) {
         isMutipleLeftImage={true}
         leftIcon={icons.Search}
         rightIcon={icons.Search}
+        likeIcon={likeIcon}
         // rightIconFired={() => alert('uploaded')}
         // LeftIconFired={() => alert('LefticonFired')}
-        // LeftLikeIconFired={() => alert('LeftLikeIconFired')}
+        LeftLikeIconFired={() => {
+          setLikeIcon(!likeIcon);
+        }}
         LeftArrowIconFired={() => props.navigation.goBack()}
         // LeftMoreIconFired={() => alert('LeftMoreIconFired')}
         // text={'news'}
