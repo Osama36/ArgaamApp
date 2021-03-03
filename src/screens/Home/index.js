@@ -300,41 +300,42 @@ export default function index(props) {
             </View>
           </View>
         </View>
-
-        <View style={styles.getSheet(COLORS).CarouselCont}>
-          <Carousel
-            layout={'default'}
-            ref={carouselRef}
-            data={carouselState}
-            sliderWidth={width}
-            itemWidth={width * 0.88}
-            renderItem={_renderItem}
-            useScrollView
-            autoplay={true}
-            loop={true}
-            autoplayDelay={1000}
-            autoplayInterval={3000}
-            // onSnapToItem={(index) => setActivateIndex(index)}
-            activeSlideAlignment="center"
-          />
-        </View>
-        <View
-          style={{
-            //backgroundColor: 'red',
-            flex: 1,
-            marginBottom: height * 0.185,
-            marginTop: height * 0.015,
-          }}>
-          <FlatList
-            data={data}
-            keyExtractor={(item) => item.key}
-            contentContainerStyle={{width: '95%', alignSelf: 'center'}}
-            style={{}}
-            renderItem={({item}) => (
-              <Article item={item} navigation={props.navigation} />
-            )}
-          />
-        </View>
+        <ScrollView>
+          <View style={styles.getSheet(COLORS).CarouselCont}>
+            <Carousel
+              layout={'default'}
+              ref={carouselRef}
+              data={carouselState}
+              sliderWidth={width}
+              itemWidth={width * 0.88}
+              renderItem={_renderItem}
+              useScrollView
+              autoplay={true}
+              loop={true}
+              autoplayDelay={1000}
+              autoplayInterval={3000}
+              // onSnapToItem={(index) => setActivateIndex(index)}
+              activeSlideAlignment="center"
+            />
+          </View>
+          <View
+            style={{
+              //backgroundColor: 'red',
+              flex: 1,
+              marginBottom: height * 0.185,
+              marginTop: height * 0.015,
+            }}>
+            <FlatList
+              data={data}
+              keyExtractor={(item) => item.key}
+              contentContainerStyle={{width: '95%', alignSelf: 'center'}}
+              style={{}}
+              renderItem={({item}) => (
+                <Article item={item} navigation={props.navigation} />
+              )}
+            />
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
